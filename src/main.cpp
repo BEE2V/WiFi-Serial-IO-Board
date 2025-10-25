@@ -62,13 +62,13 @@ void loop()
   u8g2.firstPage(); // select the first page of the display (page is 128x8px), since we are using the page drawing method of the u8g2 library
   do
   {
-    // itemRun.draw_tile(u8g2, 0, 0, true); // selected
-    // itemCalibrate.draw_tile(u8g2, 64, 0);
-    // // itemPID.draw_tile(u8g2, 0, 60);
-    // // itemDash.draw_tile(u8g2, 64, 60);
+    itemRun.draw_tile(u8g2, 0, 0, true); // selected
+    itemCalibrate.draw_tile(u8g2, 64, 0);
+    // itemPID.draw_tile(u8g2, 0, 60);
+    // itemDash.draw_tile(u8g2, 64, 60);
 
-    // itemRunRow.draw_row(u8g2, 0, 70, true);
-    // itemInfoRow.draw_row(u8g2, 0, 94);
+    itemRunRow.draw_row(u8g2, 0, 70, true);
+    itemInfoRow.draw_row(u8g2, 0, 94);
 
     // gauge1.updateValue(pot1.getValue());
     // gauge2.updateValue(pot2.getValue());
@@ -80,9 +80,9 @@ void loop()
     // u8g2.drawRFrame(0, 64, 64, 64, 8);
     // u8g2.drawRFrame(64, 64, 64, 64, 8);
 
-    gauge1.updateValue(pot1.getValue());
-    gauge1.draw(u8g2, 0, 0);
-    u8g2.drawRFrame(0, 0, 128, 128, 16);
+    // gauge1.updateValue(pot1.getValue());
+    // gauge1.draw(u8g2, 0, 0);
+    // u8g2.drawRFrame(0, 0, 128, 128, 16);
 
   } while (u8g2.nextPage()); // go over all the pages until the whole display is updated
 
